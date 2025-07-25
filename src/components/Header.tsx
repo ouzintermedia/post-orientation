@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { GraduationCap, Menu, X, User } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, isAuthenticated } = useAuth();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -34,9 +37,18 @@ const Header = () => {
             <a href="#temoignages" className="text-foreground hover:text-primary transition-colors">
               Témoignages
             </a>
-            <Button variant="default" className="bg-gradient-secondary">
-              Commencer
-            </Button>
+            {isAuthenticated ? (
+              <Button variant="ghost" asChild>
+                <Link to="/dashboard">
+                  <User className="h-4 w-4 mr-2" />
+                  {user?.prenom}
+                </Link>
+              </Button>
+            ) : (
+              <Button variant="default" className="bg-gradient-secondary" asChild>
+                <Link to="/register">Commencer</Link>
+              </Button>
+            )}
           </nav>
 
           {/* Menu Mobile */}
