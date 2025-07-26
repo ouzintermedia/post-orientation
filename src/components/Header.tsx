@@ -31,9 +31,9 @@ const Header = () => {
             <a href="#quiz" className="text-foreground hover:text-primary transition-colors">
               Quiz d'orientation
             </a>
-            <a href="#filieres" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/filieres" className="text-foreground hover:text-primary transition-colors">
               Filières
-            </a>
+            </Link>
             <a href="#temoignages" className="text-foreground hover:text-primary transition-colors">
               Témoignages
             </a>
@@ -74,9 +74,9 @@ const Header = () => {
               <a href="#quiz" className="text-foreground hover:text-primary transition-colors">
                 Quiz d'orientation
               </a>
-              <a href="#filieres" className="text-foreground hover:text-primary transition-colors">
+              <Link to="/filieres" className="text-foreground hover:text-primary transition-colors">
                 Filières
-              </a>
+              </Link>
               <a href="#temoignages" className="text-foreground hover:text-primary transition-colors">
                 Témoignages
               </a>
