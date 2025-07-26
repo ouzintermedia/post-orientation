@@ -15,8 +15,8 @@ export default function Universites() {
 
   const filteredUniversites = universites.filter(universite => {
     const matchesSearch = universite.nom.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesType = !selectedType || universite.type === selectedType;
-    const matchesVille = !selectedVille || universite.ville === selectedVille;
+    const matchesType = selectedType === 'all' || !selectedType || universite.type === selectedType;
+    const matchesVille = selectedVille === 'all' || !selectedVille || universite.ville === selectedVille;
 
     return matchesSearch && matchesType && matchesVille;
   });
@@ -59,23 +59,23 @@ export default function Universites() {
                 />
               </div>
               
-              <Select value={selectedType} onValueChange={setSelectedType}>
+              <Select value={selectedType} onValueChange={setSelectedType} defaultValue="all">
                 <SelectTrigger>
                   <SelectValue placeholder="Type d'établissement" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Tous les types</SelectItem>
+                  <SelectItem value="all">Tous les types</SelectItem>
                   <SelectItem value="Publique">Publique</SelectItem>
                   <SelectItem value="Privée">Privée</SelectItem>
                 </SelectContent>
               </Select>
 
-              <Select value={selectedVille} onValueChange={setSelectedVille}>
+              <Select value={selectedVille} onValueChange={setSelectedVille} defaultValue="all">
                 <SelectTrigger>
                   <SelectValue placeholder="Ville" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Toutes les villes</SelectItem>
+                  <SelectItem value="all">Toutes les villes</SelectItem>
                   {villes.map(ville => (
                     <SelectItem key={ville} value={ville}>{ville}</SelectItem>
                   ))}
@@ -153,8 +153,8 @@ export default function Universites() {
                 variant="outline" 
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedType('');
-                  setSelectedVille('');
+                  setSelectedType('all');
+                  setSelectedVille('all');
                 }}
               >
                 Réinitialiser les filtres

@@ -20,8 +20,8 @@ export default function Filieres() {
   const filteredFilieres = filieres.filter(filiere => {
     const matchesSearch = filiere.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          filiere.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDomain = !selectedDomain || filiere.domaine === selectedDomain;
-    const matchesSerie = !selectedSerie || filiere.seriesRecommandees.includes(selectedSerie as any);
+    const matchesDomain = selectedDomain === 'all' || !selectedDomain || filiere.domaine === selectedDomain;
+    const matchesSerie = selectedSerie === 'all' || !selectedSerie || filiere.seriesRecommandees.includes(selectedSerie as any);
     const matchesLevel = filiere.niveau.includes(user?.niveau || '4ème');
 
     return matchesSearch && matchesDomain && matchesSerie && matchesLevel;
@@ -89,24 +89,24 @@ export default function Filieres() {
                 />
               </div>
               
-              <Select value={selectedDomain} onValueChange={setSelectedDomain}>
+              <Select value={selectedDomain} onValueChange={setSelectedDomain} defaultValue="all">
                 <SelectTrigger>
                   <SelectValue placeholder="Tous les domaines" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Tous les domaines</SelectItem>
+                  <SelectItem value="all">Tous les domaines</SelectItem>
                   {domains.map(domain => (
                     <SelectItem key={domain} value={domain}>{domain}</SelectItem>
                   ))}
                 </SelectContent>
               </Select>
 
-              <Select value={selectedSerie} onValueChange={setSelectedSerie}>
+              <Select value={selectedSerie} onValueChange={setSelectedSerie} defaultValue="all">
                 <SelectTrigger>
                   <SelectValue placeholder="Toutes les séries" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Toutes les séries</SelectItem>
+                  <SelectItem value="all">Toutes les séries</SelectItem>
                   <SelectItem value="S">Série S</SelectItem>
                   <SelectItem value="L">Série L</SelectItem>
                   <SelectItem value="ES">Série ES</SelectItem>
@@ -207,8 +207,8 @@ export default function Filieres() {
                 variant="outline" 
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedDomain('');
-                  setSelectedSerie('');
+                  setSelectedDomain('all');
+                  setSelectedSerie('all');
                 }}
               >
                 Réinitialiser les filtres
