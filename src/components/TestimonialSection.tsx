@@ -15,7 +15,7 @@ const TestimonialSection = () => {
       filiere: "Informatique",
       universite: "UCAD",
       photo: student1,
-      temoignage: "Grâce à SafariFilière, j'ai découvert ma passion pour l'informatique dès la Seconde. Le quiz m'a aidée à comprendre que j'aimais résoudre des problèmes logiques. Aujourd'hui, je suis en 3ème année et je ne regrette pas mon choix !",
+      temoignage: "Grâce à PostOrientation, j'ai découvert ma passion pour l'informatique dès la 4ème. Le quiz m'a aidée à comprendre que j'aimais résoudre des problèmes logiques. Aujourd'hui, je suis en 3ème année et je ne regrette pas mon choix !",
       conseil: "N'attendez pas la Terminale pour réfléchir à votre orientation. Commencez tôt et explorez différents domaines.",
       note: 5,
       video: false
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
       filiere: "Génie Civil",
       universite: "ESP",
       photo: student2,
-      temoignage: "J'étais la seule fille de ma classe à vouloir faire de l'ingénierie. SafariFilière m'a donné confiance avec des témoignages d'autres femmes ingénieurs. Aujourd'hui, je construis l'avenir du Sénégal !",
+      temoignage: "J'étais la seule fille de ma classe à vouloir faire de l'ingénierie. PostOrientation m'a donné confiance avec des témoignages d'autres femmes ingénieurs. Aujourd'hui, je construis l'avenir du Sénégal !",
       conseil: "Les filles, n'ayez pas peur des filières scientifiques. Nous avons notre place partout !",
       note: 5,
       video: false
@@ -175,11 +175,11 @@ const TestimonialSection = () => {
         {/* Section impact */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-8">
-            L'impact de SafariFilière
+            L'impact de PostOrientation
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-card p-6 rounded-xl shadow-soft">
-              <h4 className="font-semibold mb-3 text-primary">Avant SafariFilière</h4>
+              <h4 className="font-semibold mb-3 text-primary">Avant PostOrientation</h4>
               <ul className="text-sm text-muted-foreground space-y-2 text-left">
                 <li>• Orientation de dernière minute</li>
                 <li>• Choix influencé par la famille</li>
@@ -188,7 +188,7 @@ const TestimonialSection = () => {
               </ul>
             </div>
             <div className="bg-card p-6 rounded-xl shadow-soft">
-              <h4 className="font-semibold mb-3 text-secondary">Avec SafariFilière</h4>
+              <h4 className="font-semibold mb-3 text-secondary">Avec PostOrientation</h4>
               <ul className="text-sm text-muted-foreground space-y-2 text-left">
                 <li>• Réflexion progressive dès la 2nde</li>
                 <li>• Choix personnel éclairé</li>

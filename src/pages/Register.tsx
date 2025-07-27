@@ -44,7 +44,7 @@ export default function Register() {
       if (success) {
         toast({
           title: "Inscription réussie",
-          description: "Bienvenue sur SafariFilière ! Ton compte a été créé.",
+          description: "Bienvenue sur PostOrientation ! Ton compte a été créé.",
         });
         navigate('/dashboard');
       }
@@ -68,7 +68,7 @@ export default function Register() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold text-primary">
-            Rejoins SafariFilière
+            Rejoins PostOrientation
           </CardTitle>
           <CardDescription>
             Crée ton compte pour commencer ton parcours d'orientation

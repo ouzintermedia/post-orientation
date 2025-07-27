@@ -388,7 +388,7 @@ export const temoignages = [
     niveau: 'Terminale S',
     universite: 'UCAD',
     photo: '/src/assets/student-portrait-1.jpg',
-    temoignage: 'Grâce à SafariFilière, j\'ai découvert ma passion pour la médecine dès la 3ème. Les quiz m\'ont aidée à confirmer mon choix.',
+    temoignage: 'Grâce à PostOrientation, j\'ai découvert ma passion pour la médecine dès la 3ème. Les quiz m\'ont aidée à confirmer mon choix.',
     conseil: 'Commencez à vous renseigner tôt, n\'attendez pas la Terminale !',
     dateObtentionBac: '2023',
     parcours: 'Bac S mention Bien → 1ère année médecine → Actuellement en 2ème année'
@@ -412,7 +412,7 @@ export const temoignages = [
     niveau: 'Terminale L',
     universite: 'UCAD',
     photo: '/src/assets/student-portrait-3.jpg',
-    temoignage: 'SafariFilière m\'a permis de découvrir les débouchés en droit. Je prépare maintenant le barreau !',
+    temoignage: 'PostOrientation m\'a permis de découvrir les débouchés en droit. Je prépare maintenant le barreau !',
     conseil: 'Informez-vous sur les débouchés concrets de chaque filière.',
     dateObtentionBac: '2021',
     parcours: 'Bac L → Licence Droit → Master → Préparation barreau'

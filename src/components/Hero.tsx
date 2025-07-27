@@ -16,7 +16,7 @@ const Hero = () => {
                 ton <span className="bg-gradient-secondary bg-clip-text text-transparent">avenir</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                La première plateforme sénégalaise qui t'accompagne dès la Seconde dans ton orientation post-bac. 
+                La première plateforme sénégalaise qui t'accompagne dès la 4ème dans ton orientation post-bac. 
                 Découvre tes talents, explore les filières et prépare ton futur en toute confiance.
               </p>
             </div>

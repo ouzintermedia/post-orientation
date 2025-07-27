@@ -24,7 +24,7 @@ export default function Login() {
       if (success) {
         toast({
           title: "Connexion réussie",
-          description: "Bienvenue sur SafariFilière !",
+          description: "Bienvenue sur PostOrientation !",
         });
         navigate('/dashboard');
       } else {
@@ -50,7 +50,7 @@ export default function Login() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold text-primary">
-            SafariFilière
+            PostOrientation
           </CardTitle>
           <CardDescription>
             Connecte-toi à ton compte pour continuer ton parcours d'orientation

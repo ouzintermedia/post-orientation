@@ -29,7 +29,7 @@ export default function Dashboard() {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-primary">
-            SafariFilière
+            PostOrientation
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-muted-foreground">

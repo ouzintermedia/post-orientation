@@ -18,7 +18,7 @@ const Header = () => {
               <GraduationCap className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="font-bold text-xl text-primary">SafariFilière</h1>
+              <h1 className="font-bold text-xl text-primary">PostOrientation</h1>
               <p className="text-xs text-muted-foreground">Ton orientation, ton avenir</p>
             </div>
           </div>
