@@ -311,6 +311,72 @@ export const universites = [
     contact: 'info@univ-thies.sn',
     site: 'www.univ-thies.sn',
     image: 'photo-1487958449943-2429e8be8625'
+  },
+  {
+    id: '19',
+    nom: 'ISEP-AT de Diamniadio',
+    ville: 'Diamniadio',
+    type: 'ISEP',
+    filieres: ['Agriculture', 'Élevage', 'Technologie Alimentaire'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.diamniadio@education.sn',
+    site: 'www.isep-diamniadio.edu.sn',
+    image: 'photo-1574097656146-0b43b7660cb6'
+  },
+  {
+    id: '20',
+    nom: 'ISEP de Thiès',
+    ville: 'Thiès',
+    type: 'ISEP',
+    filieres: ['Mécanique', 'Électronique', 'Informatique Industrielle'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.thies@education.sn',
+    site: 'www.isep-thies.edu.sn',
+    image: 'photo-1562774053-701939374585'
+  },
+  {
+    id: '21',
+    nom: 'ISEP de Matam',
+    ville: 'Matam',
+    type: 'ISEP',
+    filieres: ['Agriculture', 'Hydraulique', 'Développement Rural'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.matam@education.sn',
+    site: 'www.isep-matam.edu.sn',
+    image: 'photo-1500382017468-9049fed747ef'
+  },
+  {
+    id: '22',
+    nom: 'ISEP de Richard Toll',
+    ville: 'Richard Toll',
+    type: 'ISEP',
+    filieres: ['Sucrerie', 'Agriculture Irriguée', 'Mécanique Agricole'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.richardtoll@education.sn',
+    site: 'www.isep-richardtoll.edu.sn',
+    image: 'photo-1574263867128-a50ef7fc6aff'
+  },
+  {
+    id: '23',
+    nom: 'ISEP de Mbacké',
+    ville: 'Mbacké',
+    type: 'ISEP',
+    filieres: ['Textile', 'Commerce', 'Artisanat'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.mbacke@education.sn',
+    site: 'www.isep-mbacke.edu.sn',
+    image: 'photo-1509391366360-2e959784a276'
+  },
+  {
+    id: '24',
+    nom: 'ISEP de Bignona',
+    ville: 'Bignona',
+    type: 'ISEP',
+    filieres: ['Foresterie', 'Transformation Agroalimentaire', 'Pêche'],
+    frais: 'Public - Formation professionnelle',
+    contact: 'isep.bignona@education.sn',
+    site: 'www.isep-bignona.edu.sn',
+    image: 'photo-1469474968028-56623f02e42e'
   }
 ];
 

@@ -67,6 +67,7 @@ export default function Universites() {
                   <SelectItem value="all">Tous les types</SelectItem>
                   <SelectItem value="Publique">Publique</SelectItem>
                   <SelectItem value="Privée">Privée</SelectItem>
+                  <SelectItem value="ISEP">ISEP</SelectItem>
                 </SelectContent>
               </Select>
 
@@ -96,7 +97,11 @@ export default function Universites() {
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge variant={universite.type === 'Publique' ? 'default' : 'secondary'}>
+                  <Badge variant={
+                    universite.type === 'Publique' ? 'default' : 
+                    universite.type === 'ISEP' ? 'destructive' : 
+                    'secondary'
+                  }>
                     {universite.type}
                   </Badge>
                 </div>
