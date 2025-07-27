@@ -59,7 +59,7 @@ export default function Filieres() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" asChild>
-              <Link to="/dashboard">
+              <Link to="/">
                 <ArrowLeft className="h-4 w-4" />
               </Link>
             </Button>
