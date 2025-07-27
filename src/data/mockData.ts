@@ -122,7 +122,8 @@ export const universites = [
     filieres: ['Médecine', 'Droit', 'Lettres', 'Sciences', 'Économie'],
     frais: 'Publique - Frais réduits',
     contact: 'contact@ucad.edu.sn',
-    site: 'www.ucad.edu.sn'
+    site: 'www.ucad.edu.sn',
+    image: 'photo-1496307653780-42ee777d4833'
   },
   {
     id: '2',
@@ -132,7 +133,8 @@ export const universites = [
     filieres: ['Sciences', 'Lettres', 'Droit', 'Économie'],
     frais: 'Publique - Frais réduits',
     contact: 'info@ugb.edu.sn',
-    site: 'www.ugb.edu.sn'
+    site: 'www.ugb.edu.sn',
+    image: 'photo-1487337153520-7082a56a81f4'
   },
   {
     id: '3',
@@ -142,7 +144,8 @@ export const universites = [
     filieres: ['Génie Informatique', 'Génie Civil', 'Télécommunications'],
     frais: 'Publique - Frais réduits',
     contact: 'esp@ucad.edu.sn',
-    site: 'www.esp.sn'
+    site: 'www.esp.sn',
+    image: 'photo-1488590528505-98d2b5aba04b'
   },
   {
     id: '4',
@@ -152,7 +155,162 @@ export const universites = [
     filieres: ['Management', 'Finance', 'Marketing', 'Architecture'],
     frais: '1,500,000 - 3,000,000 FCFA/an',
     contact: 'info@ism.edu.sn',
-    site: 'www.ism.edu.sn'
+    site: 'www.ism.edu.sn',
+    image: 'photo-1519389950473-47ba0277781c'
+  },
+  {
+    id: '5',
+    nom: 'Université Alioune Diop de Bambey (UADB)',
+    ville: 'Bambey',
+    type: 'Publique',
+    filieres: ['Sciences Agronomiques', 'Sciences de l\'Éducation', 'Lettres'],
+    frais: 'Publique - Frais réduits',
+    contact: 'contact@uadb.edu.sn',
+    site: 'www.uadb.edu.sn',
+    image: 'photo-1459767129954-1b1c1f9b9ace'
+  },
+  {
+    id: '6',
+    nom: 'Université Assane Seck de Ziguinchor (UASZ)',
+    ville: 'Ziguinchor',
+    type: 'Publique',
+    filieres: ['Sciences', 'Lettres', 'Sciences Économiques'],
+    frais: 'Publique - Frais réduits',
+    contact: 'info@univ-zigui.sn',
+    site: 'www.univ-zigui.sn',
+    image: 'photo-1460574283810-2aab119d8511'
+  },
+  {
+    id: '7',
+    nom: 'Université du Sine Saloum El-Hâdj Ibrahima Niass (USSEIN)',
+    ville: 'Kaolack',
+    type: 'Publique',
+    filieres: ['Sciences', 'Lettres', 'Sciences Islamiques'],
+    frais: 'Publique - Frais réduits',
+    contact: 'contact@ussein.edu.sn',
+    site: 'www.ussein.edu.sn',
+    image: 'photo-1497604401993-f2e922e5cb0a'
+  },
+  {
+    id: '8',
+    nom: 'Université Virtuelle du Sénégal (UVS)',
+    ville: 'Diamniadio',
+    type: 'Publique',
+    filieres: ['Informatique', 'Management', 'Sciences'],
+    frais: 'Publique - Frais réduits',
+    contact: 'contact@uvs.edu.sn',
+    site: 'www.uvs.edu.sn',
+    image: 'photo-1498050108023-c5249f4df085'
+  },
+  {
+    id: '9',
+    nom: 'Université Amadou Mahtar Mbow (UAM)',
+    ville: 'Diamniadio',
+    type: 'Privée',
+    filieres: ['Médecine', 'Pharmacie', 'Sciences de la Santé'],
+    frais: '2,000,000 - 4,000,000 FCFA/an',
+    contact: 'info@uam.edu.sn',
+    site: 'www.uam.edu.sn',
+    image: 'photo-1527576539890-dfa815648363'
+  },
+  {
+    id: '10',
+    nom: 'Institut Africain de Management (IAM)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Management', 'Finance', 'RH', 'Marketing'],
+    frais: '1,800,000 - 2,500,000 FCFA/an',
+    contact: 'contact@iam.edu.sn',
+    site: 'www.iam.edu.sn',
+    image: 'photo-1488972685288-c3fd157d7c7a'
+  },
+  {
+    id: '11',
+    nom: 'École Supérieure de Commerce de Dakar (ESCD)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Commerce', 'Marketing', 'Gestion'],
+    frais: '1,200,000 - 2,000,000 FCFA/an',
+    contact: 'info@escd.edu.sn',
+    site: 'www.escd.edu.sn',
+    image: 'photo-1518005020951-eccb494ad742'
+  },
+  {
+    id: '12',
+    nom: 'Institut Supérieur de Communication (ISCOM)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Communication', 'Journalisme', 'Marketing Digital'],
+    frais: '1,500,000 - 2,200,000 FCFA/an',
+    contact: 'contact@iscom.sn',
+    site: 'www.iscom.sn',
+    image: 'photo-1433832597046-4f10e10ac764'
+  },
+  {
+    id: '13',
+    nom: 'Institut Supérieur d\'Informatique (ISI)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Informatique', 'Réseaux', 'Développement Web'],
+    frais: '1,800,000 - 2,800,000 FCFA/an',
+    contact: 'info@isi.edu.sn',
+    site: 'www.isi.edu.sn',
+    image: 'photo-1487058792275-0ad4aaf24ca7'
+  },
+  {
+    id: '14',
+    nom: 'Université Privée de Marrakech - Campus Dakar',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Ingénierie', 'Business', 'Architecture'],
+    frais: '2,500,000 - 3,500,000 FCFA/an',
+    contact: 'dakar@upm.ma',
+    site: 'www.upm.ma',
+    image: 'photo-1493397212122-2b85dda8106b'
+  },
+  {
+    id: '15',
+    nom: 'École Nationale d\'Administration (ENA)',
+    ville: 'Dakar',
+    type: 'Publique',
+    filieres: ['Administration', 'Diplomatie', 'Finances Publiques'],
+    frais: 'Publique - Sur concours',
+    contact: 'contact@ena.edu.sn',
+    site: 'www.ena.edu.sn',
+    image: 'photo-1492321936769-b49830bc1d1e'
+  },
+  {
+    id: '16',
+    nom: 'Institut Supérieur de Transport (IST)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Logistique', 'Transport', 'Commerce International'],
+    frais: '1,300,000 - 2,100,000 FCFA/an',
+    contact: 'info@ist.edu.sn',
+    site: 'www.ist.edu.sn',
+    image: 'photo-1483058712412-4245e9b90334'
+  },
+  {
+    id: '17',
+    nom: 'École Supérieure d\'Ingénierie de Dakar (ESID)',
+    ville: 'Dakar',
+    type: 'Privée',
+    filieres: ['Génie Civil', 'Génie Électrique', 'Génie Mécanique'],
+    frais: '2,000,000 - 3,200,000 FCFA/an',
+    contact: 'contact@esid.edu.sn',
+    site: 'www.esid.edu.sn',
+    image: 'photo-1439337153520-7082a56a81f4'
+  },
+  {
+    id: '18',
+    nom: 'Université de Thiès',
+    ville: 'Thiès',
+    type: 'Publique',
+    filieres: ['Sciences', 'Technologie', 'Lettres'],
+    frais: 'Publique - Frais réduits',
+    contact: 'info@univ-thies.sn',
+    site: 'www.univ-thies.sn',
+    image: 'photo-1487958449943-2429e8be8625'
   }
 ];
 

@@ -86,21 +86,26 @@ export default function Universites() {
         </Card>
 
         {/* Résultats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredUniversites.map(universite => (
-            <Card key={universite.id} className="hover:shadow-lg transition-shadow">
+            <Card key={universite.id} className="hover:shadow-lg transition-shadow overflow-hidden">
+              <div className="aspect-video relative overflow-hidden">
+                <img
+                  src={`https://images.unsplash.com/${universite.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
+                  alt={universite.nom}
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+                <div className="absolute top-4 right-4">
+                  <Badge variant={universite.type === 'Publique' ? 'default' : 'secondary'}>
+                    {universite.type}
+                  </Badge>
+                </div>
+              </div>
               <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <CardTitle className="text-lg mb-2">{universite.nom}</CardTitle>
-                    <div className="flex items-center gap-2 mb-2">
-                      <MapPin className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">{universite.ville}</span>
-                      <Badge variant={universite.type === 'Publique' ? 'default' : 'secondary'}>
-                        {universite.type}
-                      </Badge>
-                    </div>
-                  </div>
+                <CardTitle className="text-lg">{universite.nom}</CardTitle>
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">{universite.ville}</span>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
