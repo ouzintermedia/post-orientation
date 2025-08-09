@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, BookOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-education.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section id="accueil" className="min-h-screen flex items-center pt-20">
       <div className="container mx-auto px-4">
@@ -51,6 +53,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                onClick={() => navigate("/quiz")}
               >
                 Commencer mon quiz
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -59,6 +62,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => navigate("/filieres")}
               >
                 Découvrir les filières
               </Button>

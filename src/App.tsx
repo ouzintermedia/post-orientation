@@ -11,8 +11,12 @@ import Dashboard from "./pages/Dashboard";
 import Quiz from "./pages/Quiz";
 import Profile from "./pages/Profile";
 import Filieres from "./pages/Filieres";
+import FiliereDetail from "./pages/FiliereDetail";
 import Favoris from "./pages/Favoris";
 import Universites from "./pages/Universites";
+import Temoignages from "./pages/Temoignages";
+import TemoignageDetail from "./pages/TemoignageDetail";
+import PartagerTemoignage from "./pages/PartagerTemoignage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,8 +36,12 @@ const App = () => (
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/filieres" element={<Filieres />} />
+            <Route path="/filiere/:id" element={<FiliereDetail />} />
             <Route path="/favoris" element={<Favoris />} />
             <Route path="/universites" element={<Universites />} />
+            <Route path="/temoignages" element={<Temoignages />} />
+            <Route path="/temoignage/:id" element={<TemoignageDetail />} />
+            <Route path="/partager-temoignage" element={<PartagerTemoignage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

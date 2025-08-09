@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Clock, Users, MapPin, Briefcase } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FilieresSection = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDomain, setSelectedDomain] = useState("all");
   const [selectedSeries, setSelectedSeries] = useState("all");
@@ -230,6 +232,7 @@ const FilieresSection = () => {
                 <Button 
                   variant="outline" 
                   className="w-full group-hover:border-primary group-hover:text-primary transition-colors"
+                  onClick={() => navigate(`/filiere/${filiere.id}`)}
                 >
                   En savoir plus
                 </Button>
@@ -266,7 +269,11 @@ const FilieresSection = () => {
             <p className="text-primary-foreground/80 mb-6">
               Notre base contient plus de 50 filières. Utilise notre quiz pour découvrir celles qui te correspondent.
             </p>
-            <Button variant="secondary" size="lg">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              onClick={() => navigate("/quiz")}
+            >
               Faire le quiz d'orientation
             </Button>
           </div>
