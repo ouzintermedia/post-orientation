@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, BookOpen } from "lucide-react";
 import heroImage from "@/assets/hero-education.jpg";
 
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section id="accueil" className="min-h-screen flex items-center pt-20">
       <div className="container mx-auto px-4">
@@ -16,7 +19,7 @@ const Hero = () => {
                 ton <span className="bg-gradient-secondary bg-clip-text text-transparent">avenir</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                La première plateforme sénégalaise qui t'accompagne dès la Seconde dans ton orientation post-bac. 
+                La première plateforme sénégalaise qui t'accompagne dès la classe de 4 ème dans ton orientation post-bac. 
                 Découvre tes talents, explore les filières et prépare ton futur en toute confiance.
               </p>
             </div>
@@ -34,7 +37,7 @@ const Hero = () => {
                 <div className="flex items-center justify-center mb-2">
                   <Users className="h-6 w-6 text-secondary" />
                 </div>
-                <div className="text-2xl font-bold text-secondary">30+</div>
+                <div className="text-2xl font-bold text-secondary">20+</div>
                 <div className="text-sm text-muted-foreground">Universités</div>
               </div>
               <div className="text-center">
@@ -51,6 +54,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                onClick={() => navigate("/QuizSection")}
               >
                 Commencer mon quiz
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -59,6 +63,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => navigate("/Filieres")}
               >
                 Découvrir les filières
               </Button>
@@ -84,7 +89,7 @@ const Hero = () => {
             
             {/* Floating cards */}
             <div className="absolute -top-4 -left-4 bg-card p-4 rounded-xl shadow-soft border">
-              <div className="text-sm font-medium text-primary">2nde → Terminale</div>
+              <div className="text-sm font-medium text-primary">4ème → Terminale</div>
               <div className="text-xs text-muted-foreground">Progression guidée</div>
             </div>
             

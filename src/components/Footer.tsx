@@ -13,7 +13,7 @@ const Footer = () => {
                 <GraduationCap className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="font-bold text-xl text-primary">SafariFilière</h1>
+                <h1 className="font-bold text-xl text-primary">PostOrientation</h1>
                 <p className="text-xs text-muted-foreground">Ton orientation, ton avenir</p>
               </div>
             </div>
@@ -143,7 +143,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 SafariFilière. Tous droits réservés. 
+              © 2024 PostOrientation. Tous droits réservés. 
               <span className="ml-2">Made with ❤️ au Sénégal</span>
             </div>
             <div className="flex space-x-6 text-sm">

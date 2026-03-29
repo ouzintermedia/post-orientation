@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Clock, Users, MapPin, Briefcase } from "lucide-react";
 import { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const FilieresSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -272,6 +274,10 @@ const FilieresSection = () => {
           </div>
         </div>
       </div>
+        <Header/>
+        {/* <Footer/> */}
+            
+      
     </section>
   );
 };

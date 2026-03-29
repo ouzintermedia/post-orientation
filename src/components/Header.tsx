@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,28 +17,30 @@ const Header = () => {
               <GraduationCap className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="font-bold text-xl text-primary">SafariFilière</h1>
+              <h1 className="font-bold text-xl text-primary">PostOrientation</h1>
               <p className="text-xs text-muted-foreground">Ton orientation, ton avenir</p>
             </div>
           </div>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#accueil" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Accueil
-            </a>
-            <a href="#quiz" className="text-foreground hover:text-primary transition-colors">
-              Quiz d'orientation
-            </a>
-            <a href="#filieres" className="text-foreground hover:text-primary transition-colors">
-              Filières
-            </a>
-            <a href="#temoignages" className="text-foreground hover:text-primary transition-colors">
-              Témoignages
-            </a>
-            <Button variant="default" className="bg-gradient-secondary">
-              Commencer
-            </Button>
+            </Link>
+            <Link to="/QuizSection" className="text-foreground hover:text-primary transition-colors">
+            Quiz d'orientation
+          </Link>
+            <Link to="/filieres" className="text-foreground hover:text-primary transition-colors">
+            Filières
+          </Link>
+            <Link to="/temoignages" className="text-foreground hover:text-primary transition-colors">
+            Témoignages
+          </Link>
+            <Link to="/filieres">
+          <Button variant="default" className="bg-gradient-secondary">
+            Commencer
+          </Button>
+  </Link>
           </nav>
 
           {/* Menu Mobile */}
