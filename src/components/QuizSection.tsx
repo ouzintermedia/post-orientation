@@ -2,24 +2,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Clock, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 
 const QuizSection = () => {
-  const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   const questions = [
     {
       question: "Qu'est-ce qui t'intéresse le plus ?",
       options: [
+        "Résoudre des problèmes complexes",
         "Aider et soigner les autres",
         "Créer et innover",
-        "Communiquer et convaincre",
-        "Résoudre des problèmes complexes",
+        "Communiquer et convaincre"
       ]
     },
     {
@@ -73,7 +72,6 @@ const QuizSection = () => {
   };
 
   return (
-    
     <section id="quiz" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -150,14 +148,21 @@ const QuizSection = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                   onClick={() => navigate("/Filieres")}
-                    className="bg-gradient-primary">
-                    Voir les filières recommandées
-                    
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                   
-                  </Button>
+                  {isAuthenticated ? (
+                    <Button className="bg-gradient-primary" asChild>
+                      <Link to="/quiz">
+                        Quiz personnalisé
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button className="bg-gradient-primary" asChild>
+                      <Link to="/register">
+                        S'inscrire pour plus
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  )}
                   <Button variant="outline" onClick={resetQuiz}>
                     Refaire le quiz
                   </Button>
@@ -192,15 +197,8 @@ const QuizSection = () => {
           </div>
         </div>
       </div>
-      <Header />  
-            
-      {/* <Footer />   */}
-
     </section>
-    
-    
   );
-  
 };
 
 export default QuizSection;

@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-muted-foreground">
               La première plateforme sénégalaise dédiée à l'orientation scolaire. 
-              Nous aidons les élèves à préparer leur avenir dès la Seconde.
+              Nous aidons les élèves à préparer leur avenir dès la 4ème.
             </p>
             <div className="flex space-x-2">
               <Button variant="outline" size="icon" className="h-8 w-8">

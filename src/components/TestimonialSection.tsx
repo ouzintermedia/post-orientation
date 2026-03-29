@@ -2,13 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Quote, Play, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import student1 from "@/assets/student-portrait-1.jpg";
 import student2 from "@/assets/student-portrait-2.jpg";
 import student3 from "@/assets/student-portrait-3.jpg";
-import Header from "./Header";
-import Footer from "./Footer";
 
 const TestimonialSection = () => {
+  const navigate = useNavigate();
   const testimonials = [
     {
       id: 1,
@@ -17,7 +17,7 @@ const TestimonialSection = () => {
       filiere: "Informatique",
       universite: "UCAD",
       photo: student1,
-      temoignage: "Grâce à PostOrientation, j'ai découvert ma passion pour l'informatique dès la Seconde. Le quiz m'a aidée à comprendre que j'aimais résoudre des problèmes logiques. Aujourd'hui, je suis en 3ème année et je ne regrette pas mon choix !",
+      temoignage: "Grâce à PostOrientation, j'ai découvert ma passion pour l'informatique dès la 4ème. Le quiz m'a aidée à comprendre que j'aimais résoudre des problèmes logiques. Aujourd'hui, je suis en 3ème année et je ne regrette pas mon choix !",
       conseil: "N'attendez pas la Terminale pour réfléchir à votre orientation. Commencez tôt et explorez différents domaines.",
       note: 5,
       video: false
@@ -138,12 +138,22 @@ const TestimonialSection = () => {
 
                 {/* Action */}
                 {temoignage.video ? (
-                  <Button variant="outline" className="w-full" size="sm">
+                  <Button 
+                    variant="outline" 
+                    className="w-full" 
+                    size="sm"
+                    onClick={() => navigate(`/temoignage/${temoignage.id}/video`)}
+                  >
                     <Play className="h-4 w-4 mr-2" />
                     Voir la vidéo complète
                   </Button>
                 ) : (
-                  <Button variant="ghost" className="w-full text-primary" size="sm">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full text-primary" 
+                    size="sm"
+                    onClick={() => navigate(`/temoignage/${temoignage.id}`)}
+                  >
                     Lire le témoignage complet
                   </Button>
                 )}
@@ -163,10 +173,16 @@ const TestimonialSection = () => {
                 Aide les futurs étudiants en partageant ton parcours et tes conseils d'orientation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-primary">
+                <Button 
+                  className="bg-gradient-primary"
+                  onClick={() => navigate("/partager-temoignage")}
+                >
                   Partager mon témoignage
                 </Button>
-                <Button variant="outline">
+                <Button 
+                  variant="outline"
+                  onClick={() => navigate("/temoignages")}
+                >
                   Voir tous les témoignages
                 </Button>
               </div>
@@ -201,8 +217,6 @@ const TestimonialSection = () => {
           </div>
         </div>
       </div>
-      <Header/>
-      {/* <Footer/> */}
     </section>
   );
 };

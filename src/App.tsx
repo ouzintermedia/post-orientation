@@ -3,29 +3,50 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Quiz from "./pages/Quiz";
+import Profile from "./pages/Profile";
+import Filieres from "./pages/Filieres";
+import FiliereDetail from "./pages/FiliereDetail";
+import Favoris from "./pages/Favoris";
+import Universites from "./pages/Universites";
+import Temoignages from "./pages/Temoignages";
+import TemoignageDetail from "./pages/TemoignageDetail";
+import PartagerTemoignage from "./pages/PartagerTemoignage";
 import NotFound from "./pages/NotFound";
-import QuizSection from "./components/QuizSection";
-import FilieresSection from "./components/FilieresSection";
-import TestimonialSection from "./components/TestimonialSection";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/QuizSection" element={<QuizSection />} />
-          <Route path="/filieres" element={<FilieresSection />} />
-          <Route path="/temoignages" element={<TestimonialSection />} />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/filieres" element={<Filieres />} />
+            <Route path="/filiere/:id" element={<FiliereDetail />} />
+            <Route path="/favoris" element={<Favoris />} />
+            <Route path="/universites" element={<Universites />} />
+            <Route path="/temoignages" element={<Temoignages />} />
+            <Route path="/temoignage/:id" element={<TemoignageDetail />} />
+            <Route path="/partager-temoignage" element={<PartagerTemoignage />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
