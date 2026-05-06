@@ -75,7 +75,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Guide d'orientation 2nde
+                  Guide d'orientation  4ème
                 </a>
               </li>
               <li>
@@ -143,7 +143,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 PostOrientation. Tous droits réservés. 
+              © 2027 PostOrientation. Tous droits réservés. 
               <span className="ml-2">Made with ❤️ au Sénégal</span>
             </div>
             <div className="flex space-x-6 text-sm">

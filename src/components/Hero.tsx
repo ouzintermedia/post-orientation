@@ -71,7 +71,7 @@ const Hero = () => {
             {/* Badge confiance */}
             <div className="inline-flex items-center space-x-2 bg-muted px-4 py-2 rounded-full">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Déjà utilisé par 1000+ élèves sénégalais</span>
+              <span className="text-sm font-medium">Déjà utilisé par 200+ élèves sénégalais en teste</span>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ const Hero = () => {
             
             {/* Floating cards */}
             <div className="absolute -top-4 -left-4 bg-card p-4 rounded-xl shadow-soft border">
-              <div className="text-sm font-medium text-primary">2nde → Terminale</div>
+              <div className="text-sm font-medium text-primary"> 4ème → Terminale</div>
               <div className="text-xs text-muted-foreground">Progression guidée</div>
             </div>
             

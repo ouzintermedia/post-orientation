@@ -208,7 +208,7 @@ const TestimonialSection = () => {
             <div className="bg-card p-6 rounded-xl shadow-soft">
               <h4 className="font-semibold mb-3 text-secondary">Avec PostOrientation</h4>
               <ul className="text-sm text-muted-foreground space-y-2 text-left">
-                <li>• Réflexion progressive dès la 2nde</li>
+                <li>• Réflexion progressive dès la  4ème</li>
                 <li>• Choix personnel éclairé</li>
                 <li>• Connaissance des opportunités</li>
                 <li>• Motivation renforcée</li>
